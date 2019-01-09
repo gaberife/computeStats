@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <limits.h>
+void computeStats(){
+  int m;
+  int n;                                                                                                                                                                             
+  double sum = 0;
+  float average = 0;
+                                                                                                                                                                                
+  printf("How many numbers would you like to compute: \n");                                                                                                                            
+  scanf("%d", &n);                                                                                      */
+
+  if( n < 0 ) {
+    printf("Please enter a number greater than 0.\n");
+  }
+ else{
+    int min, max, temp;
+     min = INT_MAX;
+    printf("\nEnter %d numbers\n", n);
+    for(int i = 0; i < n; i++){
+      scanf("%d", &m);
+      sum += m;
+      temp = m;
+      if (temp >= max)
+        max = temp;
+      if  (temp <= min)
+        min = m;
+    }
+    average = sum/n;
+    printf("Average: %2.2f\t", average);
+    printf("Maximum: %d\t", max);
+    printf("Minimum: %d\t\n", min);
+  }
+}
+
+int main() {
+  computeStats();
+  return 0;
+}
